@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position</title>
+</head>
+<body>
+    <h2>Position Absolute</h2>
+    <div style="background-color: cadetblue; color: rgb(88, 54, 10);padding: 10px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto iure laborum ea assumenda nihil quod adipisci, dolores culpa quibusdam. Non asperiores optio, perferendis quae reprehenderit repudiandae tempore minima quia labore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quis nam nobis esse hic asperiores illum earum recusandae tempora mollitia itaque consequuntur odio eaque adipisci, quam aspernatur vero molestiae nulla.</div>
+    <label style="background-color: brown; color: azure; padding: 10px; width: fit-content; position: absolute; top: 220px; ">This is  Absolute text</label>
+<style>
+    .div-rel{
+        width: 300px;
+        height: 320px;
+        border: 2px  solid black;
+        position: relative;
+        top: 150px;
+        
+    }
+    .div-rel > div{
+        position: absolute;
+        /* top: 50px; */
+        left: 20px;
+        bottom: 56px;
+        background-color: brown;
+        color: rgb(1, 190, 190);
+        padding: 10px;
+
+
+    }
+
+
+</style>
+    <div class="div-rel">
+        <div>this is Absolute inside Relative</div> 
+        
+    </div>
+    <hr>
+    <div style="border: 2px solid gold; position: fixed; color: rgb(59, 156, 156); padding: 10px 20px; width: fit-content; right: 0px; "> This is fix and sticky</div>
+   <hr>
+
+   <div style="border: 2px solid gold; position: sticky; color: rgb(59, 156, 156); padding: 0px 0px; width: fit-content; top: 20px; "> This is fix and sticky</div>
+
+
+    <section style="background-color: rgb(41, 58, 23); height: 999px; "></section>
+    <div style="border: 6px dashed black; height: 100px; position: relative;">
+        <p style="position: absolute; bottom: 0; left: 47%;">This is footer</p>
+
+
+    </div>
+    
+</body>
+</html>
+<!-- 
+    Position
+    -------
+    Static
+    Relative
+    Fixed
+    Absolute
+    Sticky
+    
+
+
+ -->

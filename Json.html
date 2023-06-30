@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js" integrity="sha512-9Dh726RTZVE1k5R1RNEzk1ex4AoRjxNMFKtZdcWaG2KUgjEmFYN3n17YLUrbHm47CRQB1mvVBHDFXrcnx/deDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>">
+</head>
+<body>
+    <h1>JSON</h1>
+    <script>
+        var phone = '{ "mobile_phone" : [' +
+        '{ "company":"Apple", "name":"Iphone"},' +
+        '{ "company":"Xiaomi", "name":"Mi" },' +
+        '{ "company":"Asus", "name":"ROG"},'+
+        '{ "company":"Samsung", "name":"Galaxy" } ]}';
+        document.write(phone + "<br>");
+        
+        var jsphone=JSON.parse(phone);
+
+        document.write("index 0 of conpany data : " + jsphone.mobile_phone[0].company+ "<br>");
+        document.write("index 0 of name data : " + jsphone.mobile_phone[0].name+ "<br><br>");
+        document.write("index 1 of conpany data : " + jsphone.mobile_phone[1].company+ "<br>");
+        document.write("index 1 of name data : " + jsphone.mobile_phone[1].name+ "<br><br>");
+        document.write("index 2 of conpany data : " + jsphone.mobile_phone[2].company+ "<br>");
+        document.write("index 2 of name data : " + jsphone.mobile_phone[2].name+ "<br><br>");
+        document.write("index 3 of conpany data : " + jsphone.mobile_phone[3].company+ "<br>");
+        document.write("index 3 of name data : " + jsphone.mobile_phone[3].name+ "<br><br>");
+
+    </script>
+    <hr>
+    <script>
+        var mobile = '{ "phone1" : [' + 
+        '{ "company":"Apple", "name":"Iphone", "model":"14pro max", "storage":"128gb", "productimage":"Media/1.jpg" },' +
+        '{ "company":"Xiaomi", "name":"Mi", "model":"13 ultra", "storage":"256gb,12gb", "productimage":"Media/1.jpg" },' +
+        '{ "company":"Asus", "name":"ROG", "model":"7 ultra", "storage":"256gb,16gb", "productimage":"Media/1.jpg" },'+
+        '{ "company":"Samsung", "name":"Galaxy", "model":"23 ultra", "storage":"256gb,12gb", "productimage":"Media/1.jpg" } ]}';
+        var phoneobj = JSON.parse(mobile);
+        
+        document.write("Row count: " + phoneobj.phone.length);
+        for (let index = 0; index< phoneobj.phone1.length; index++ )
+        {
+            document.write("Row index " + index + "and col company data : " + phoneobj.phone1[index].company + "<br>");
+            document.write("Row index " + index + "and col company data : " + phoneobj.phone1[index].name + "<br>");
+            document.write("Row index " + index + "and col company data : " + phoneobj.phone1[index].model + "<br>");
+            document.write("Row index " + index + "and col company data : " + phoneobj.phone1[index].storage + "<br>");
+            document.write("img src=' "+ index + phonejs.phone1[index].Media + " ' width = '150px' height='150px' ><br><br>");
+        }
+    </script>
+    <hr>
+    <h2>Phone List</h2>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>NO.</th>
+                <th>Company</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Storage</th>
+            </tr>
+    
+
+        </thead>
+        <tbody>
+            <script>
+                for (let index = 0; index< phoneobj.phone1.length; index++ )
+                {
+                    document.write("<tr>");
+                    document.write("<td>" + (index+1) + "</td>");
+                    document.write("<td>" + phoneobj.phone1[index].company + "</td>");
+                    document.write("<td>" + phoneobj.phone1[index].name + "</td>");
+                    document.write("<td>" + phoneobj.phone1[index].model + "</td>");
+                    document.write("<td>" + phoneobj.phone1[index].storage + "</td>");
+                    document.write("</tr>");
+                }
+                $(document).ready( function () {
+                     $('#myTable').DataTable();
+                } );
+
+            </script>
+        </tbody>
+        
+    </table>
+    <hr>
+    <h2>Product display</h2>
+    <section>
+        <script>
+            for( let index = 0; index < phoneobj.phone1.length; index++)
+            {
+                document.write("<div>");
+                document.write("img src=' "+ index + phoneobj.phone1[index].Media + " ' width = '150px' height='150px' ><br><br>");
+                document.write("<table>");
+                document.write("<tr>");
+                    document.write("<td>Company: </td>");
+                        document.write("<td>" + phoneobj.phone1[index].company + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Name: </td>");
+                        document.write("<td>" + phoneobj.phone1[index].name + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Model: </td>");
+                        document.write("<td>" + phoneobj.phone1[index].model + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td>Storage: </td>");
+                        document.write("<td>" + phoneobj.phone1[index].storage + "</td>");
+                    document.write("</tr>");
+                    document.write("<tr>");
+                        document.write("<td colspan='2'><a href=''>More Detail</a></td>");
+                    document.write("</tr>");
+                document.write("</table>");
+                document.write("</div>");
+
+
+
+            }
+           </script>
+    </section>
+    
+</body>
+</html>

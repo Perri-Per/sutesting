@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <title>Html Form</title>
+    <style>
+        td{
+           min-width: 200px;
+           line-height: 1cm;
+           font-family: EB Garamond;
+        }
+        fieldset{
+            width: 39%;
+            margin: 0 auto;
+            padding-top: 20px ;
+            margin-top: 50px;
+            border-radius: 20px;
+        }
+        
+        
+    </style>
+    <nav align="center" style="background-color: rgb(217, 213, 213) ; height: 22px; width:auto; margin-top: 0px ;">
+        <a href="index.html"> Home Page</a> |
+        <a href="About us.html"> About us</a> |
+        <a href="form.html"> form</a> |
+       
+    
+    </nav>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Create new account</legend>
+            <table>
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td><input type="text" name="txtname" placeholder=" Mr. Smith Willm" required ></td>
+                </tr>
+                <tr>
+                    <td>
+                        Eamil:
+                    </td>
+                    <td><input type="email" name="txtemail" placeholder=" smithewill@gmail.com" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td><input type="password" name="txtpass" placeholder=" ***************" minlength="8" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        Date Of Birth:
+                    </td>
+                    <td><input type="date" name="txtdob" required></td>
+                </tr>
+                
+                <tr>
+                    <td>
+                         Phone Number: 
+                    </td>
+                    <td><input type="number" name="txtnum" placeholder=" 0076758656" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender: 
+                    </td>
+                    <td><input type="radio" name="rdogender" checked value="Male">Male <input type="radio" name="rdogender" value="Female"> Female <input type="radio" name="rdogender" value="Other">Other</td>
+                </tr>
+                <tr>
+                    <td>NRC:</td>
+                    <td><select name="cbonrc1" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> /
+                    <select name="cbonrc2" >
+                        <option value="Ta Ma Ma Na">Ta Ma Ma Na</option>
+                        <option value="La Ma Na">La Ma Na</option>
+                        <option value="La Ya Ra">La Ya Ra</option>
+                    </select> (
+                    <select name="cbonrc3" >
+                        <option value="Ng">Ng</option>
+                        <option value="Pyu">Pyu</option>
+                        <option value="Ei">Ei</option>
+                    </select> )
+                    <input type="number" name="txtnumber" placeholder=" 0000000000 " style="width: 100px;" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Profile Picture: </td>
+                    <td><input type="file" name="filprofile" required></td>
+                </tr>
+                <tr>
+                    <td>Address: </td>
+                    <td><textarea name="txtadd" cols="30" rows="5" style="resize: none;" placeholder=" Example: No.20th, YG street, Backen township, Netherland " required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" name="chkterm" required> Agree Terms and Conditions </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Cancel">
+                </td>
+                    
+                </tr>
+
+
+            </table>
+        </fieldset>
+    </form>
+   
+   
+   
+    
+</body>
+</html>
+<!-- 
+   CSS
+   External Css
+   Internal Css  => 
+   Inline Css => use with tag <tag style = ""> more powerful
+
+        ---
+    External Css
+    Internal Css    => <style> selector(html tag){property: value;} </style>
+    Inline Css  => <tag style="property:value;"></tag>
+
+
+
+ -->
